@@ -1399,7 +1399,7 @@ static ssize_t ipa_debugfs_set_debug_stats(struct file *file,
 	s8 option = 0;
 	char dbg_buff[MAX_IPA_DEBUG_LEN] = {0};
 
-	if (MAX_IPA_DEBUG_LEN < count + 1)
+	if (MAX_IPA_DEBUG_LEN < count)
 		return -EFAULT;
 
 	missing = copy_from_user(dbg_buff, buf, count);
