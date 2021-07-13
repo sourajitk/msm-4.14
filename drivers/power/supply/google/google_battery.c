@@ -2359,7 +2359,7 @@ static int msc_pm_hold(int msc_state)
 		pm_state = 0;  /* pm_relax */
 		break;
 	default:
-		pr_info("hold not defined for msc_state=%d\n", msc_state);
+		pr_debug("hold not defined for msc_state=%d\n", msc_state);
 		pm_state = 0;  /* pm_relax */
 		break;
 	}
